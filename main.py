@@ -13,10 +13,10 @@ jacky.hideturtle()
 
 data = pandas.read_csv("50_states.csv")
 df = pandas.DataFrame(data)
-game_is_on = True
+
 list_of_answers = []
 value = 0
-while game_is_on:
+while value < 50:
     answer_state = screen.textinput(title=f"{value}/50 correct", prompt="What's another state's name?")
     for i in df["state"]:
         if answer_state.title() == i:
@@ -32,4 +32,4 @@ while game_is_on:
 
 
 
-turtle.mainloop()
+screen.exitonclick()
